@@ -6,7 +6,6 @@ void setup()
   size (750, 750);
   frameRate(20);
   erak=new Bacteria[20];
-  //tim=new Bacteria[5];
   for (int i=0; i<erak.length; i++)
   {
     erak[i]= new Bacteria();
