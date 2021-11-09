@@ -6,6 +6,7 @@ void setup()
   size (750, 750);
   frameRate(20);
   erak=new Bacteria[20];
+  //tim=new Bacteria[5];
   for (int i=0; i<erak.length; i++)
   {
     erak[i]= new Bacteria();
@@ -25,11 +26,13 @@ void mousePressed()
 {
   food=true;
 }
-int x, y;
+int x, y, g, t;
 class Bacteria    
 {    
  int myX;
  int myY;
+ int g=675;
+ int t=675;
   Bacteria()
   {
   myX=(int)(Math.random()*500);
@@ -38,6 +41,8 @@ class Bacteria
 
 void show()
 {
+  fill (240, 12, 12);
+  rect (g,t,50,50);
   fill (130,250,250);
   ellipse(myX, myY, 30, 30);
 }
@@ -45,12 +50,12 @@ void walk()
 {  
   {
     if(food==true){
-       myX+=(int)((Math.random()*50)-25);
-       myY+=(int)((Math.random()*50)-25);
+       myX+=(int)((Math.random()*10)-4);
+       myY+=(int)((Math.random()*10)-4);
        
         }else if(food==false){
-          myX+=(int)((Math.random()*7)-3);
-          myY+=(int)((Math.random()*7)-3);
+          myX+=(int)((Math.random()*8)-4);
+          myY+=(int)((Math.random()*8)-4);
        }
   }
 }
